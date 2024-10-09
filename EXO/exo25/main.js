@@ -7,7 +7,7 @@ const select = document.querySelector("#dog-select");
 const chiens = []; 
 const choixSelect = document.querySelector("#selectOutput")
 
-// Input pour récupére ultérieurement les valeurs
+// Input pour récupérer ultérieurement les valeurs
 const nom = document.querySelector("#dog-name");
 const race = document.querySelector("#dog-breed");
 const age = document.querySelector("#dog-age")
@@ -17,7 +17,6 @@ form.addEventListener("submit", (e) => {
     
     const newChien = new chien(nom.value, race.value, age.value);
     chiens.push(newChien);
-    // console.log(newChien);
     
     // select
     const option = document.createElement("option");
@@ -27,13 +26,10 @@ form.addEventListener("submit", (e) => {
 
     // Réinitialiser le formulaire après soumission
     e.target.reset();
-    
 });
 
 
-// const elt = document.querySelector('#dog-select');
 select.addEventListener('change', function () {
-
     choixSelect.textContent = `Vous avez sélectionné le chien avec l'ID ${this.value}`
 
     const selectedChien = chiens.find(chien => chien.id === parseInt(this.value));
