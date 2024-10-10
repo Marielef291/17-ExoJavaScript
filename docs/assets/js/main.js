@@ -28,7 +28,7 @@ const displayResult = (data) => {
     pokeName.value = data.name.charAt(0).toUpperCase() + data.name.slice(1).toLowerCase() +" - n°"+data.id;
     pokeWeight.value = (data.weight * 0.1).toFixed(1) + " Kg";  
     pokeHeight.value = (data.height * 10) + " cm";  
-    pokemonImage.src = imgPoke + data.id + "/regular.png";
+    // pokemonImage.src = imgPoke + data.id + "/regular.png";
     pokeID = data.id;
       
     let textTypes = ''; 
@@ -45,7 +45,7 @@ const displayResult = (data) => {
     pokemoncapacity.value = textCapacitys
 
     // EN GIF
-    // pokemonImage.src = "https://projectpokemon.org/images/normal-sprite/" + data.name + ".gif";
+    pokemonImage.src = "https://projectpokemon.org/images/normal-sprite/" + data.name + ".gif";
 };
 
 const nextPoke = async () => {
