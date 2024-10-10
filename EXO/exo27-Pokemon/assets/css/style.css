@@ -16,7 +16,7 @@ header {
 }
 
 header img {
-    width: 100px; /* Ajustez la taille selon vos besoins */
+    width: 100px;
 }
 
 #pokemon-search {
@@ -27,14 +27,14 @@ header img {
 
 #search-input {
     padding: 10px;
-    border: 2px solid #f08030; /* Couleur orange Pokémon */
+    border: 2px solid #f08030;
     border-radius: 5px;
     width: 300px;
     margin-right: 5px;
 }
 
 button {
-    background-color: #f08030; /* Couleur orange Pokémon */
+    background-color: #f08030;
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff9933; /* Couleur orange plus clair au survol */
+    background-color: #ff9933;
 }
 
 main {
@@ -52,31 +52,73 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: white;
-    border: 2px solid #f08030; /* Bordure en couleur Pokémon */
+    border: 2px solid #f08030;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Flexbox pour placer les boutons de chaque côté */
+#pokemon-display-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 #pokemon-display {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#pokemon-info {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
 }
 
 #pokemon-picture {
-    width: 150px; /* Ajustez la taille de l'image selon vos besoins */
+    width: 150px;
     height: auto;
+    margin-right: 20px;
 }
 
-#pokemon-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f08030; /* Couleur Pokémon */
-    margin: 10px 0;
+#pokemon-stats {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 300px;
 }
 
-#pokemon-weight,
-#pokemon-height {
+.pokemon-stat {
+    margin-bottom: 10px;
+}
+
+.stat-title {
     font-size: 16px;
+    font-weight: bold;
+    color: #f08030;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-output {
+    font-size: 14px;
+    padding: 5px;
+    border: 2px solid #f08030;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #f9f9f9;
+}
+
+.stat-output[readonly] {
+    background-color: #eee;
     color: #555;
 }
 
@@ -94,11 +136,35 @@ main {
     border-radius: 5px;
     margin: 5px;
     padding: 5px 10px;
-    color: #f08030; /* Couleur Pokémon */
+    color: #f08030;
 }
 
 button#pokemon-previous,
 button#pokemon-next {
-    margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    background-color: #f08030;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#pokemon-previous:hover,
+button#pokemon-next:hover {
+    background-color: #ff9933;
+}
+
+button#pokemon-previous,
+button#pokemon-next {
+    flex-shrink: 0;
+    width: 50px;
+}
+
+#pokemon-previous {
+    margin-right: 20px;
+}
+
+#pokemon-next {
+    margin-left: 20px;
 }

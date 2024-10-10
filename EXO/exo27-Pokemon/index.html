@@ -16,24 +16,83 @@
           placeholder="Nom ou Numéro de Pokédex national"
           id="search-input"
         />
-        <button>Search</button>
+        <button id="search-btn">Search</button>
       </form>
     </header>
     <main>
-      <button id="pokemon-previous" disabled>&lt;&lt;</button>
-      <div id="pokemon-display">
-        <img
-          id="pokemon-picture"
-          src="./assets/img/pokeball.png"
-          alt="Pokemon Sprite"
-        />
-        <span id="pokemon-name">NAME</span>
-        <span id="pokemon-weight">WEIGHT</span>
-        <span id="pokemon-height">HEIGHT</span>
-        <ul id="pokemon-types"></ul>
-        <ul id="pokemon-abilities"></ul>
+      <div id="pokemon-display-container">
+        <button id="pokemon-previous" >&lt;&lt;</button>
+        <div id="pokemon-display">
+          <div id="pokemon-info">
+            <img
+              id="pokemon-picture"
+              src="./assets/img/pokeball.png"
+              alt="Pokemon Sprite"
+            />
+            <div id="pokemon-stats">
+              <div class="pokemon-stat">
+                <label for="pokemon-name" class="stat-title">Nom</label>
+                <input
+                  type="text"
+                  id="pokemon-name"
+                  class="stat-output"
+                  value=""
+                  placeholder="No data"
+                  readonly
+                />
+              </div>
+              <div class="pokemon-stat">
+                <label for="pokemon-weight" class="stat-title">Poids</label>
+                <input
+                  type="text"
+                  id="pokemon-weight"
+                  class="stat-output"
+                  value=""
+                  placeholder="No data"
+                  readonly
+                />
+              </div>
+              <div class="pokemon-stat">
+                <label for="pokemon-height" class="stat-title">Taille</label>
+                <input
+                  type="text"
+                  id="pokemon-height"
+                  class="stat-output"
+                  value=""
+                  placeholder="No data"
+                  readonly
+                />
+              </div>
+              <div class="pokemon-stat">
+                <label for="pokemon-type" class="stat-title">Types</label>
+                <input
+                  type="text"
+                  id="pokemon-type"
+                  class="stat-output"
+                  value=""
+                  placeholder="No data"
+                  readonly
+                />
+              </div>
+              <div class="pokemon-stat">
+                <label for="pokemon-capacity" class="stat-title">Capacités</label>
+                <input
+                  type="text"
+                  id="pokemon-capacity"
+                  class="stat-output"
+                  value=""
+                  placeholder="No data"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <ul id="pokemon-types"></ul>
+          <ul id="pokemon-abilities"></ul>
+        </div>
+        <button id="pokemon-next" >&gt;&gt;</button>
       </div>
-      <button id="pokemon-next" disabled>&gt;&gt;</button>
     </main>
+    
   </body>
 </html>
