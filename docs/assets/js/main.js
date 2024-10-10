@@ -45,7 +45,8 @@ const displayResult = (data) => {
     pokemoncapacity.value = textCapacitys
 
     // EN GIF
-    pokemonImage.src = "https://projectpokemon.org/images/normal-sprite/" + data.name + ".gif";
+    pokemonImage.src = "https://projectpokemon.org/images/normal-sprite/" + data.name.replace('-', '_') + ".gif";
+
 };
 
 const nextPoke = async () => {
